@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.clear:after{
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+	}
+   .header{
+	   width:800px;
+	   height:80px;
+	   margin:0 auto;
+	   text-align:center;
+	   overflow: hidden;
+    }
+    .small{
+    	float: left;
+    }
+    .middle{
+    	float: right;
+    }
+    .first{
+    	font-size:15px;
+    	color: rgba(73,73,73,1);
+    	height: 30px;
+    }
+    .second {
+    	font-size: 10px;
+    	color: rgba(73,73,73,1);
+    	height: 30px;
+    }
+    .third {
+    	font-size: 10px;
+    	color: rgba(73,73,73,1);
+    	height: 30px;
+    }
+    .second a{
+    	font-size: 14px;
+    }
+    .second a:hover{
+    	color: orange;
+    	text-decoration: underline;
+    }
+    .third a{
+    	font-size: 14px;
+    }
+    .third a:hover{
+    	color: orange;
+    	text-decoration: underline;
+    }
+    .logo{
+    	float: left;
+    }
+    .logo img
+    {
+    	width:90px;
+    	height: 70px;
+    	line-height: 70px;
+    	text-align: center;
+    	display: block;
+    }
+    
+    .top{
+	   float:right;
+	   overflow: hidden;
+    }
+    .right{
+	   float:left;
+	   margin-top: 16px;
+	   overflow: hidden;
+    }
+    .nav{
+    	float: left;
+    	width: 400px;
+    	height: 80px;
+    }
+    .nav li{
+    	text-align: center;
+    	width: 100px;
+    	line-height: 80px;
+    	height: 70px;
+    	
+    }
+    ul{
+    	list-style-type: none;
+    }
+    a{
+    	color: black;
+    	text-decoration: none;
+    	font-size: 20px;
+    }
+    .nav li:hover>a{
+    	color: orange;
+    	text-decoration: underline;
+    	font-size: 20px;
+    }
+    .nav>ul>li ul{
+    	display: none;
+    	position: absolute;
+    	right:20px;
+    }
+    .nav>ul>li{
+    	float: left;
+    	position: relative;
+    }
+    .nav>ul>li:hover ul{
+    	display: block;
+    }
+    
+    .search{
+	    float:left;
+	    width:169px;
+	    font-size: 7px;
+	    padding-top:7px;
+	    padding-bottom:6px;
+	    padding-left:10px;
+	    border:1px solid rgba(0,164,255);
+    }
+    .submit{
+	    float:left;
+	    width:20px;
+	    height:15x;
+	    padding-left:7.5px;
+	    padding-right: 7.5px;
+	    padding-top:5px;
+	    padding-bottom: 5px;
+	    border:1px solid rgba(0,164,255,1);
+	    background:rgba(0,164,255,1) url(fa-search.png) no-repeat center center;
+	    background-size:10px 10px;
+    }
+    .text{
+	    display: inline-block;
+	    width:40px;
+	    height:6px;
+	    margin-top: 22px;
+	    font-size:7px;
+	    font-weight:400;
+	    color:rgba(102,102,102,1);
+    }
+    .banner{
+	    width:1200px;
+	    height:350px;
+	    margin:0 auto;
+	    text-align:center;
+	
+    }
+    .banner img{
+	    width:800px;
+	    height:350px;
+	    margin-left: 200px;
+	    margin-right:200px;
+    }
+    .wenzi{
+    	width: 800px;
+    	height: 70px;
+    	margin:0 auto;
+    	overflow: hidden;
+    }
+    .one{
+    	float: left;
+    	width: 44px;
+    	height: 10px;
+    	font-size: 11px;
+    	font-weight: 400;
+    	color:rgba(73,73,73,1);
+    	margin-top: 22px;
+    }
+    .one a{
+    	font-size: 11px;
+    }
+    .one a:hover{
+    	color: orange;
+    	text-decoration: underline;
+    }
+    .two{
+    	float: right;
+    	width: 44px;
+    	height: 10px;
+    	font-size: 11px;
+    	font-weight: 400;
+    	color: rgba(73,73,73,1);
+    	margin-top: 22px;
+    }
+    .two a{
+    	font-size: 11px;
+    }
+    .two a:hover{
+    	color:orange;
+    	text-decoration: underline;
+    }
+    .back{
+    	height:600px;
+    	margin:0 auto;
+    	text-align: center;
+    }
+    .red{
+    	width:1200px;
+    	margin:0 auto;
+    	text-align: center;
+    }
+    .green{
+    	
+    	float: left;
+    	position: relative;
+    }
+    .green img{
+    	width: 400px;
+    }
+    .purple{
+    	margin-left: 2px;
+    	float: left;
+    	position: relative;
+    }
+    .purple img{
+    	width:398px;
+    	height: 275px;
+    }
+    .blue{
+    	
+    	margin-left: 4px;
+    	float: left;
+    	position: relative;
+    }
+    .blue img{
+    	width:396px;
+    	height: 275px;
+    }
+    .orange{
+    	margin-top: 4px;
+    	margin-left: 2px;
+    	float: left;
+    	position: relative;
+    }
+    .orange img{
+    	width:398px;
+    	height:275px;
+    }
+    .gray{
+    	margin-top: 4px;
+    	margin-left: 4px;
+    	float: left;
+    	position: relative;
+    }
+    .gray img{
+    	width:396px;
+    	height: 275px;
+    }
+    .pink{
+    	width: 400px;
+    	height: 73px;
+    	text-align: center;
+    	line-height: 73px;
+    	margin-top: -73px;
+    	position: absolute;
+    	background-color: rgba(0,0,0,0.4);
+    	color: #fff;
+    }
+    .footer{
+    	width: 1200px;
+    	height: 200px;
+    	margin: 0 auto;
+    	background-color: white;
+    	
+    }
+    .bottom{
+    	width: 1200px;
+    	
+    	margin: 0 auto;
+    	overflow: hidden;
+    }
+    .logol{
+    	width: 200px;
+    	float: left;
+    	margin-top: 18px;
+    	text-align: center;
+    	padding-top: 25px;
+
+    }
+    .logol img{
+    	width: 90px;
+    	height: 70px;
+    }
+    .tab1{
+    	width: 250px;
+    	overflow: hidden;
+    	margin-top: 18px;
+    	float: left;
+    }
+    .tab1 p{
+    	font-size: 12px;
+    }
+    .tab3{
+    	width: 250px;
+    	overflow: hidden;
+    	margin-top: 18px;
+    	float: left;
+    }
+    .tab3 p{
+    	font-size: 12px;
+    }
+    .tab5{
+    	width: 250px;
+    	overflow: hidden;
+    	margin-top: 18px;
+    	float: left;
+    }
+    .tab5 p{
+    	font-size: 12px;
+    }
+    .tab7{
+    	width: 250px;
+    	overflow: hidden;
+    	margin-top: 18px;
+    	float: left;
+    }
+    .tab7 p{
+    	font-size: 12px;
+    }
+    .tab2 a{
+    	font-size: 10PX;
+    	margin-top: 7px;
+    	text-decoration: none;
+    }
+    .tab2 a:hover{
+    	color: orange;
+    	text-decoration: underline;
+    }
+</style>
+<body bgcolor="pink" text="blue">
+	<div class="whole">
+		<div class="small">
+			<span class="first">《版权信息声明》在浏览本网站之前，请仔细阅读本声明</span>
+		</div>
+		<div class="middle">
+			<span class="second"><a href="#">注册</a></span>
+			<span class="third"><a href="#">登录</a></span>
+		</div>
+
+		<div class="header">
+			<div class="logo">
+				<img src="logo.jpg" alt="图标logo"/>
+			</div>
+			<div class="nav">
+				<ul class="clear">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">景区介绍</a></li>
+					<li class="big"><a href="#">历史文化</a>
+						<ul>
+							<li><a href="#">日本文化</a></li>
+							<li><a href="#">樱花文化</a></li>
+						</ul>
+					</li>
+					<li><a href="#">日本旅游签证</a></li>
+				</ul>
+			</div>
+			<div class="top">
+				<span class="text">个人中心</span>
+				<form class="right">
+					<input type="text" class="search" placeholder="输入关键词"/>
+					<input type="buttun" class="submit"/>
+				</form>
+			</div>
+		</div>
+		<div class="banner">
+			<img src="樱花.jpg" alt="图标logo"/>
+		</div>
+		<div class="wenzi">
+			<span class="one"><a href="#">精品推荐</a></span>
+			<span class="two"><a href="#">查看全部</a></span>
+		</div>
+		<div class="back">
+			<div class="red">
+				<div class="green">
+					<img src="img/visa1.jpg" alt="日本logo"/>
+					<div class="pink">日本旅游签证&nbsp;&nbsp;
+					</div>
+				</div>
+				<div class="purple">
+					<img src="1.jpg" alt="樱花logo"/>
+				</div>
+				<div class="blue">
+					<img src="2.jpg" alt="樱花logo"/>
+				</div>
+				<div class="orange">
+					<img src="3.jpg" alt="樱花logo"/>
+				</div>
+				<div class="gray">
+					<img src="4.jpg" alt="樱花logo"/>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="bottom">
+				<div class="logol">
+					<img src="logo.jpg" alt="樱花logo"/>
+				</div>
+				<div class="tab1">
+					<p>常见问题</p>
+					<ul class="tab2">
+						<li><a href="#">成为签约设计师</a></li>
+                        <li><a href="#">注册登录</a></li>
+                        <li><a href="#">账号/密码</a></li>
+                        <li><a href="#">发票/售后</a></li>
+                        <li><a href="#">版权投诉</a></li>
+					</ul>
+				</div>
+				<div class="tab3">
+					<p>关于千网图</p>
+					<ul class="tab2">
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">心系千图</a></li>
+						<li><a href="#">Q群联盟</a></li>
+					</ul>
+				</div>
+				<div class="tab5">
+					<p>产品服务</p>
+					<ul class="tab2">
+						<li><a href="#">官方博客</a></li>
+						<li><a href="#">服务中心</a></li>
+					</ul>
+				</div>
+				<div class="tab7">
+					<p>合作伙伴</p>
+					<ul class="tab2">
+						<li><a href="#">代理商分销</a></li>
+						<li><a href="#">VIP代购</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+</body>
+</html>
